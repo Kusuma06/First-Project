@@ -1,0 +1,121 @@
+5<!-- Create a simple Program to build the Calculator in JavaScript using with HTML and CSS web languages. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Calculator </title>
+
+    <style>
+        body {
+            padding: 0;
+            background-color: rgb(246, 187, 246);
+            margin: 6%;
+        }
+
+        .formstyle {
+            width: 270px;
+            height: 540px;
+            margin: auto;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: white;
+            border: blueviolet;
+        }
+
+        input {
+            width: 20px;
+            border: none;
+            color: blueviolet;
+            border-radius: 5px;
+            padding: 26px;
+            margin: 5px;
+            font-size: 15px;
+            box-shadow: 1px 2px 3px 0px blueviolet;
+        }
+
+
+        #calc {
+            color: black;
+            width: 220px;
+            border-radius: 3px;
+            padding: 20px;
+            box-shadow: 0 1px 2px 0 blueviolet;
+        }
+
+        span {
+            display: flex;
+        }
+
+        span>input {
+            color: white;
+            background-color: rgb(128, 74, 177);
+            width: 125px;
+            border-radius: 3px;
+            padding: 20px;
+            background-color: rgb(128, 74, 177);
+            color: white;
+        }
+
+        #numbers>input:hover {
+            color: white;
+            background-color: rgb(233, 108, 133);
+        }
+
+        #numbers>input {
+            background-color: violet;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="formstyle">
+        <form name="form1">
+
+            <!-- This input box shows the button pressed by the user in calculator. -->
+            <input id="calc" type="text" name="answer"> <br> <br>
+            <!-- Display the calculator button on the screen. -->
+            <!-- onclick() function display the number prsses by the user. -->
+
+            <div id="numbers">
+
+                <input type="button" value="1" onclick="form1.answer.value += '1' ">
+                <input type="button" value="2" onclick="form1.answer.value += '2' ">
+                <input type="button" value="3" onclick="form1.answer.value += '3' ">
+                <input type="button" value="+" onclick="form1.answer.value += '+' " class="op">
+                <br> <br>
+
+                <input type="button" value="4" onclick="form1.answer.value += '4' ">
+                <input type="button" value="5" onclick="form1.answer.value += '5' ">
+                <input type="button" value="6" onclick="form1.answer.value += '6' ">
+                <input type="button" value="-" onclick="form1.answer.value += '-' " class="op">
+                <br> <br>
+
+                <input type="button" value="7" onclick="form1.answer.value += '7' ">
+                <input type="button" value="8" onclick="form1.answer.value += '8' ">
+                <input type="button" value="9" onclick="form1.answer.value += '9' ">
+                <input type="button" value="*" onclick="form1.answer.value += '*' " class="op">
+                <br> <br>
+
+
+                <input type="button" value="/" onclick="form1.answer.value += '/' " class="op">
+                <input type="button" value="0" onclick="form1.answer.value += '0' ">
+                <input type="button" value="." onclick="form1.answer.value += '.' " class="op">
+                <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+                <input type="button" value="=" onclick="form1.answer.value = eval(form1.answer.value) " class="op">
+                <br>
+            </div>
+            <!-- Display the Cancel button and erase all data entered by the user. -->
+            <br>
+            <span id="span">
+                <input type="button" value="Delete" class="delete"
+                    onclick="form1.answer.value =form1.answer.value.toString().slice(0,-1) ">
+                <input type="button" value="Clear All" onclick="form1.answer.value = ' ' " id="clear">
+            </span>
+            <br>
+
+        </form>
+    </div>
+</body>
+
+</html>
